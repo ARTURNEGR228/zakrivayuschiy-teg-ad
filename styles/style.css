@@ -19,7 +19,7 @@
   font-family: var(--basic-font), sans-serif;
   font-variation-settings: 'wght' var(--slim-font-weight);
   font-size: 18px;
-  border-color: var(--text-color); 
+  border-color: var(--text-color);
   padding: 100px 0;
   color: var(--text-color);
   background-attachment: fixed;
@@ -73,7 +73,7 @@
   font-family: var(--pixel-font, sans-serif);
 }
 
-.theme-menu__button{
+.theme-menu__button {
   text-transform: uppercase;
   border: 0;
   background-color: inherit;
@@ -131,7 +131,7 @@
   flex-direction: column;
 }
 
-.card-list{
+.card-list {
   width: var(--element-width);
   display: flex;
   flex-direction: column;
@@ -147,8 +147,8 @@
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(156, 39, 176, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(156, 39, 176, 0.2);
 }
 
 .card-title {
@@ -177,8 +177,8 @@
 
 @supports (-webkit-text-stroke: 1px var(--background-color)) or (text-stroke: 1px var(--background-color)) {
   .card-img-label {
-      text-shadow: none;
-      -webkit-text-stroke: 1px var(--background-color);
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color);
   }
 }
 
@@ -193,7 +193,7 @@
 }
 
 .filter_grayscale {
-  filter:grayscale(75%);
+  filter: grayscale(75%);
 }
 
 .filter_brightness {
@@ -306,20 +306,19 @@
 }
 
 .button::before {
-  content: ""; 
-  display: block; 
-  position: absolute; 
-  z-index: 1; 
-  inset: 0; 
-  width: 0; 
-  height: 100%; 
-  display: block; 
-  background-color: var(--text-color); 
-  transition: width 0.5s ease-in-out; 
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--text-color);
+  transition: width 0.5s ease-in-out;
 }
 
 .button:hover::before {
-  width: 100%; 
+  width: 100%;
 }
 
 .card__like-button {
@@ -424,8 +423,7 @@ dialog::backdrop([open]) {
 }
 
 @media (width <= 376px) {
-  
-  .footer-button{
+  .footer-button {
     flex-direction: column;
   }
 
@@ -433,5 +431,4 @@ dialog::backdrop([open]) {
     width: 28px;
     height: 28px;
   }
-
 }

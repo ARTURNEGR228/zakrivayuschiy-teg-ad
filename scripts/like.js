@@ -14,11 +14,14 @@ const iconButtonArray = document.querySelectorAll('.card__icon-button');
 
 iconButtonArray.forEach((iconButton, index) => {
   iconButton.onclick = () =>
+    event.preventDefault();
     toggleIsLiked(likeHeartArray[index], likeButtonArray[index]);
 });
 
 likeButtonArray.forEach((button, index) => {
-  button.onclick = () => toggleIsLiked(likeHeartArray[index], button);
+  button.onclick = () => 
+    event.preventDefault();
+    toggleIsLiked(likeHeartArray[index], button);
 });
 
 function toggleIsLiked(heart, button) {
