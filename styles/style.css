@@ -432,3 +432,50 @@ dialog::backdrop([open]) {
     height: 28px;
   }
 }
+
+.filters-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.filters-label {
+  font-family: var(--pixel-font, sans-serif);
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.filters-select {
+  width: 300px;
+  padding: 8px;
+  border: 2px solid var(--text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--basic-font), sans-serif;
+  font-size: 16px;
+}
+
+.filters-select option {
+  padding: 5px;
+}
+
+.filters-select:focus {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+}
+
+.filters-hint {
+  font-family: var(--basic-font), sans-serif;
+  font-size: 12px;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+@media (width <= 376px) {
+  .filters-select {
+    width: 250px;
+  }
+}

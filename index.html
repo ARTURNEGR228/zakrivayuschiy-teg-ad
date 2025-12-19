@@ -552,6 +552,19 @@
           </div>
         </article>
       </div>
+      <div class="filters-section">
+        <label for="image-filters" class="filters-label">Фильтры для изображений:</label>
+        <select id="image-filters" class="filters-select" multiple>
+          <option value="grayscale">Черно-белый</option>
+          <option value="brightness">Яркость</option>
+          <option value="hue-rotate">Оттенок</option>
+          <option value="invert">Инвертирование</option>
+          <option value="saturate">Насыщенность</option>
+          <option value="blur">Размытие</option>
+          <option value="opacity">Прозрачность</option>
+        </select>
+        <p class="filters-hint">Для выбора нескольких фильтров удерживайте Ctrl (Cmd на Mac)</p>
+      </div>
       <button
         type="button"
         class="button footer-button"
@@ -582,5 +595,32 @@
       </form>
     </dialog>
     <script src="./scripts/like.js"></script>
+    <script>
+      // Добавляем обработчики событий для предотвращения перезагрузки
+      document.addEventListener('DOMContentLoaded', function() {
+        const saveButton = document.getElementById('save-button');
+        const dialog = document.getElementById('dialog-id');
+        const okButton = document.getElementById('ok-button');
+        const dialogForm = document.getElementById('dialog-form');
+        
+        // Кнопка "Сохранить на память"
+        saveButton.addEventListener('click', function(event) {
+          event.preventDefault(); // Предотвращаем перезагрузку
+          dialog.showModal();
+        });
+        
+        // Кнопка "ОК" в диалоге
+        okButton.addEventListener('click', function(event) {
+          event.preventDefault(); // Предотвращаем отправку формы
+          dialog.close();
+        });
+        
+        // Также предотвращаем отправку формы по Enter
+        dialogForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          dialog.close();
+        });
+      });
+    </script>
   </body>
 </html>
