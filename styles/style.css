@@ -264,7 +264,6 @@
   color: var(--text-color);
   align-items: center;
   background-color: var(--background-color);
-  border: none;
   cursor: pointer;
   outline: none;
   height: 38px;
@@ -358,14 +357,8 @@
   font-size: 14px;
 }
 
-.dialog:not([open]) {
-  opacity: 0;
-  pointer-events: none;
-}
-
-dialog::backdrop([open]) {
-  opacity: 0.75;
-  background-color: var(--text-color);
+.dialog[open] {
+  display: block; /* Показываем когда есть атрибут open */
 }
 
 .dialog {
@@ -375,6 +368,7 @@ dialog::backdrop([open]) {
   padding: 30px;
   background-color: var(--background-color);
   width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  display: none;
 }
 
 .dialog::backdrop {
